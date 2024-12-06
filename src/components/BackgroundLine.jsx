@@ -9,40 +9,56 @@ const CurvedLine = () => {
       const canvas = canvasRef.current;
       const ctx = canvas.getContext('2d');
 
-      canvas.width = window.innerWidth - 60;
-      canvas.height = window.innerHeight * 1.5; // Set height to 150vh
+      // Set canvas dimensions to fill the viewport
+      canvas.width = window.innerWidth - 50;
+      canvas.height = window.innerHeight * 2;
 
-      // Draw the curved line
-      ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas before drawing
+      // Clear canvas before drawing
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.beginPath();
 
-      // Starting point at 100px from the top right corner and 70px from the top
-      ctx.moveTo(canvas.width - 70, 80);
+      // First Curve - Starting point
+      const startX = canvas.width - 70;
+      const startY = 50;
 
-      // First curve (from the starting point to the next point 300px from the right and 120px from the top)
-      ctx.bezierCurveTo(
-        canvas.width - 100, // cp1x
-        canvas.height -300, // cp1y
-        canvas.width - 300, // cp2x
-        10, // cp2y
-        canvas.width - 300, // x
-        120 // y
-      );
+      // First Curve - End point
+      const endX = canvas.width - canvas.width * 0.4;
+      const endY = canvas.height/2;
 
-    
-      // Third curve (from the previous point to the end, 200px from the left corner and 50px from the bottom)
-      ctx.bezierCurveTo(
-        canvas.width - 600, // cp1x
-        canvas.height - 100, // cp1y
-        canvas.width - 400, // cp2x
-        canvas.height - 50, // cp2y
-        200, // x
-        canvas.height - 50 // y
-      );
+      // First Curve - Control points
+      const cp1x = startX + (1 * (endX - startX));
+      const cp1y = startY + (0.4 * (endY - startY));
+      const cp2x = startX + (-0.3 * (endX - startX));
+      const cp2y = startY + (0.4 * (endY - startY));
 
-      // Apply stroke style
+      // Move to the starting point of first curve
+      ctx.moveTo(startX, startY);
+
+      // Draw the first Bézier curve
+      ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, endX, endY);
+
+      // Second Curve - Starting point (end of first curve)
+      const secondStartX = endX;
+      const secondStartY = endY;
+
+      // Second Curve - End point (bottom left corner)
+      const secondEndX = 350;
+      const secondEndY = canvas.height - 250;
+
+      // Second Curve - Control points
+      const secondCp1x = secondStartX + (0.6 * (secondEndX - secondStartX));
+      const secondCp1y = secondStartY + (0.4 * (secondEndY - secondStartY));
+      const secondCp2x = secondStartX + (0.3 * (secondEndX - secondStartX));
+      const secondCp2y = secondStartY + (0.3 * (secondEndY - secondStartY));
+
+      // Draw the second Bézier curve
+      ctx.bezierCurveTo(secondCp1x, secondCp1y, secondCp2x, secondCp2y, secondEndX, secondEndY);
+
+      // Apply stroke style for both curves
       ctx.strokeStyle = '#8000FF';
-      ctx.lineWidth = 4;
+      ctx.lineWidth = 15;
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round"
       ctx.stroke();
     };
 
@@ -55,8 +71,13 @@ const CurvedLine = () => {
   }, []);
 
   return (
-    <Box pos="absolute" top="0" left="0" w="full" h="full" pointerEvents="none" zIndex="-1">
-      <canvas ref={canvasRef} />
+    <Box
+      pos="absolute"
+      left="0"
+      pointerEvents="none"
+      zIndex="-1"
+    >
+      <canvas ref={canvasRef} style={{ position: 'absolute', top: -207, bottom:0, left: 0 }} />
     </Box>
   );
 };

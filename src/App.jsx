@@ -7,9 +7,9 @@ import "./index.css"
 function App() {
   const lightPurple = "#9524FF"
   return (
-    <Box>
+    <Box fontFamily={"Montserrat, poppins"}>
       <NavBar primaryColorLight={lightPurple} />
-      <HomePage />
+      <HomePage primaryColorLight={lightPurple} />
     </Box>
   );
 }
