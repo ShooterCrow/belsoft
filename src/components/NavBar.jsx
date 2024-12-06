@@ -10,21 +10,21 @@ const NavBar = ({ primaryColorLight }) => {
     });
 
     return (
-        <HStack zIndex={9} top={0} left={0} right={0} position={"fixed"} bg={"#FDF7FF"} px={20} h={"85px"} borderBottom={"1px solid #b5b5b5"} justifyContent={"space-between"}>
+        <HStack zIndex={9} top={0} left={0} right={0} position={"fixed"} bg={"#FDF7FF"} px={20} h={"125px"} borderBottom={"1px solid #b5b5b5"} justifyContent={"space-between"}>
             <Image w={"330px"} src='/logo.png' />
             <Flex display={{ base: "none", md: "flex" }} gap={100}>
                 <HStack gap={9}>
                     <NavLink to="/" style={({ isActive }) => getLinkStyle(isActive)}>
-                       <Text fontSize={20} fontWeight={"medium"}> Home </Text>
+                       <Text fontSize={"24px"} fontWeight={"medium"}> Home </Text>
                     </NavLink>
                     <NavLink to="/about-us" style={({ isActive }) => getLinkStyle(isActive)}>
-                        <Text fontSize={20} fontWeight={"medium"}>About Us </Text>
+                        <Text fontSize={"24px"} fontWeight={"medium"}>About Us </Text>
                     </NavLink>
                     <NavLink to="/gallery" style={({ isActive }) => getLinkStyle(isActive)}>
-                        <Text fontSize={20} fontWeight={"medium"}>Gallery </Text>
+                        <Text fontSize={"24px"} fontWeight={"medium"}>Gallery </Text>
                     </NavLink>
                     <NavLink to="/contact-us" style={({ isActive }) => getLinkStyle(isActive)}>
-                       <Text fontSize={20} fontWeight={"medium"}> Contact Us </Text>
+                       <Text fontSize={"24px"} fontWeight={"medium"}> Contact Us </Text>
                     </NavLink>
                 </HStack>
                 {/* Register Button */}
@@ -37,7 +37,7 @@ const NavBar = ({ primaryColorLight }) => {
                     alignItems={"center"} 
                     border={`2px solid ${primaryColorLight}`}
                 >
-                    <Text fontWeight={"medium"} color={primaryColorLight}>Register</Text>
+                    <Text fontWeight={"medium"} fontSize={"24px"} color={primaryColorLight}>Register</Text>
                     <FaArrowRight color={primaryColorLight} />
                 </Flex>
             </Flex>

@@ -1,7 +1,7 @@
 import { Box, Image } from "@chakra-ui/react"
 import CorsivaText from "../FontsComponent/CorsivaText"
 
-const ImageCusDeg = ({transform, zIndex, width, height, text, image, borderColor, bR, alt}) => {
+const ImageCusDeg = ({transform, textColor, padding, zIndex, width, height, text, textSize, image, borderColor, bR, alt}) => {
 
     return (
         <Box
@@ -12,6 +12,7 @@ const ImageCusDeg = ({transform, zIndex, width, height, text, image, borderColor
             transform={transform}
             boxShadow="1px 1px 10px rgba(0, 0, 0, 0.3)"
             zIndex={zIndex}
+            h={"min"}
         >
             <Image
                 src={image}
@@ -21,7 +22,7 @@ const ImageCusDeg = ({transform, zIndex, width, height, text, image, borderColor
                 h={height}
                 pb={""}
             />
-            <CorsivaText m={0} textAlign={"center"} color={"white"} pt={1} fontSize="20px" pb={0}>
+            <CorsivaText fontSize={textSize} m={0} textAlign={"center"} color={textColor} pt={1} pb={0}>
                 {text}
             </CorsivaText>
         </Box>

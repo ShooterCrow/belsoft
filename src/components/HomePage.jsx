@@ -4,11 +4,11 @@ import BackgroundLine from './BackgroundLine';
 import HeroContainer from './HeroParent/HeroContainer';
 // import { Calendar as CalendarIcon, LocationOn as LocationIcon } from 'lucide-react';
 
-const HomePage = ({primaryColorLight}) => {
+const HomePage = ({primaryColorLight, baseWhite}) => {
     return (
-        <Box px={20}>
+        <Box pt={"272px"} px={"139px"}>
             <BackgroundLine />
-            <HeroContainer primaryColorLight={primaryColorLight} />
+            <HeroContainer baseWhite={baseWhite} primaryColorLight={primaryColorLight} />
         </Box>
     );
 };
