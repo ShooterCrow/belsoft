@@ -40,7 +40,6 @@ const HeroTopComp = ({ baseWhite, primaryColorLight }) => {
                         gap={3}
                         w={"486.8px"}
                         h={"80px"}
-                        px={3}
                         py={1}
                         borderRadius={40}
                         mt={"40px"}
@@ -74,13 +73,13 @@ const HeroTopComp = ({ baseWhite, primaryColorLight }) => {
             </VStack>
 
             {/* Right Side */}
-            <Flex border={"1px solid red"} mb={"-600px"} display={{ base: "none", xl: "flex" }} position={"relative"} justifyContent={"flex-start"} w={"40%"} alignItems="flex-start" gap={4} direction="column">
+            <Flex mb={"-600px"} display={{ base: "none", xl: "flex" }} position={"relative"} justifyContent={"flex-start"} w={"40%"} alignItems="flex-start" gap={4} direction="column">
                 <ImageCusDeg
                     transform={"translate(-110px, -50px) rotate(-6.49deg)"}
                     bR={"20px"}
                     borderColor={image1Colour}
                     width={"361.8px"}
-                    height={"387.32"}
+                    height={"387.32px"}
                     text={"Founders Friday"}
                     textColor={baseWhite}
                     textSize={"25px"}
@@ -102,7 +101,7 @@ const HeroTopComp = ({ baseWhite, primaryColorLight }) => {
                     image={"/imageHero2.png"}
                     alt={"Event Image 2"} />
                 <ImageCusDeg
-                    transform={"translate(-150px, -460px) rotate(10.09deg)"}
+                    transform={"translate(-120px, -460px) rotate(10.09deg)"}
                     bR={"20px"}
                     borderColor={image3Colour}
                     width={"201px"}
@@ -113,7 +112,7 @@ const HeroTopComp = ({ baseWhite, primaryColorLight }) => {
                     image={"/imageHero2.png"}
                     alt={"Event Image 2"} />
                 <ImageCusDeg
-                    transform={"translate(150px, -500px) rotate(-15deg)"}
+                    transform={"translate(150px, -550px) rotate(-15deg)"}
                     bR={"20px"}
                     position={"absolute"}
                     borderColor={image3Colour}

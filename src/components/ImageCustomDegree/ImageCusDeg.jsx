@@ -10,16 +10,17 @@ const ImageCusDeg = ({transform, textColor, padding, zIndex, width, height, text
             border={`7px solid ${borderColor}`}
             overflow={"hidden"}
             transform={transform}
+            w={width}
+            h={height}
             boxShadow="1px 1px 10px rgba(0, 0, 0, 0.3)"
             zIndex={zIndex}
-            h={"min"}
         >
             <Image
                 src={image}
                 alt={alt}
                 objectFit="cover"
-                w={width}
-                h={height}
+                // w={"inherit"}
+                // h={"inherit"}
                 pb={""}
             />
             <CorsivaText fontSize={textSize} m={0} textAlign={"center"} color={textColor} pt={1} pb={0}>
