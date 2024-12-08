@@ -3,6 +3,7 @@ import { Box, Image } from '@chakra-ui/react';
 const CurvedLine = () => {
   return (
     <Box
+      display={{ base: "none", md: "none", lg: "none", xl: "block" }}
       pos="absolute"
       right={"13rem"}
       top="103px"
@@ -11,8 +12,8 @@ const CurvedLine = () => {
       pointerEvents="none"
       zIndex="-1"
     >
-      <Image 
-        src="/heroLine1.svg" 
+      <Image
+        src="/heroLine1.svg"
         alt="Curved Background Line"
         layout="fill"
         objectFit="cover"

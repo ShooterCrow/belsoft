@@ -9,23 +9,24 @@ const LinkButton = ({border = "none", width, px = "70px", py = "20px", bg = "non
             display={"flex"}
             alignItems={"center"}
             justifyContent={"center"}
+            style={{margin: "0 auto"}}
             as={RouterLink}
             to={link}
-            w={width}
+            w={{base: "fit-content", xl: width}}
             textDecor={"none"}
             _hover={{ textDecoration: "none" }}
             border={border}
             bg={bg}
             gap={2}
             px={px}
-            py={py}
+            py={{md: "5px", xl: py}}
             borderColor={color}
             borderRadius={"40px"} >
             <Text
                 mt={0}
                 color={color}
                 fontWeight={"semibold"}
-                fontSize={"24px"} >
+                fontSize={{xl: "24px"}} >
                 {text}
             </Text>
             {arrow ?

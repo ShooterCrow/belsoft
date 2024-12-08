@@ -5,16 +5,19 @@ const Offer = ({ title, content }) => {
         <HStack borderBottom={"1px solid #3C3641"} h={"160px"} w={"100%"}>
             <HStack w={"40%"}>
                 <Image
+                    display={{ base: "none", lg: "block" }}
+                    mr={"50px"}
                     w={"24.8px"}
                     h={"24.8px"}
                     src="/Ellipse.svg"
                     alt="Ellipse"
                     layout="fill" />
-                <Text ml={"50px"} fontWeight="semibold" fontSize="40px"> {title} </Text>
+                <Text fontWeight="semibold" fontSize={{ base: "1rem", lg: "2rem", xl: "40px" }}> {title} </Text>
             </HStack>
             <HStack w={"60%"}>
-                <Text fontWeight="semibold" fontSize="16px" color={"#75687E"} > {content} </Text>
+                <Text fontWeight="semibold" fontSize={{base: "14px", xl:"16px"}} color={"#75687E"} > {content} </Text>
                 <Image
+                    display={{base: "none", lg: "block"}}
                     w={"80px"}
                     h={"80px"}
                     marginLeft={"auto"}

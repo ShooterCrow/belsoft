@@ -66,7 +66,7 @@ const Attendees = () => {
   }, [currentIndex]);
 
   return (
-    <Flex mb={"180px"} direction="column" align="center" justify="center" h="600px" position="relative" p={4} >
+    <Flex mb={{base: "50px", xl: "180px"}} px={{base: "40px", xl: "114px"}} direction="column" align="center" justify="center" h={{xl: "600px"}} position="relative" >
       {/* Heading */}
       <Text fontSize={isDesktop ? '45px' : '2xl'} fontWeight="bold" mb={"20px"}>
         What Do Our Attendees Have To Say?

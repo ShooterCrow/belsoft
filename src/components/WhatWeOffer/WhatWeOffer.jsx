@@ -1,5 +1,6 @@
-import { Box, Image, Text, VStack } from "@chakra-ui/react"
+import { Box, Heading, Image, Text, VStack } from "@chakra-ui/react"
 import Offer from "./Offer"
+import HeadingCustom from "../HeadingCustom"
 
 const WhatWeOffer = () => {
   const offers = [
@@ -25,8 +26,8 @@ const WhatWeOffer = () => {
     }
   ]
   return (
-    <VStack mt={"180px"}>
-      <Text mb={"30px"} textAlign={"center"} fontWeight={"bold"} fontSize={"45px"}>What We Offer</Text>
+    <VStack mt={{base: "50px", lg: "100px", xl: "180px"}}>
+      <HeadingCustom textAlign={"center"} fontWeight={"bold"} content={"What We Offer"} spaceB={"30px"} font={"45px"}></HeadingCustom>
       {
         offers.map((offer, idx) => (
           <Offer key={idx} title={offer.title} content={offer.content} />

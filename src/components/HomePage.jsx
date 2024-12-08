@@ -13,34 +13,24 @@ import FAQs from './FAQs';
 import FooterContainer from './Footer/FooterContainer';
 // import { Calendar as CalendarIcon, LocationOn as LocationIcon } from 'lucide-react';
 
-const HomePage = ({ primaryColorLight, baseWhite }) => {
+const HomePage = ({ primaryColorLight, baseWhite, getLinkStyle }) => {
     return (
-        <Box pt={"272px"}>
+        <Box pt={{ xl: "272px", lg: "200px", base: "50px", md: "100px" }}>
             <BackgroundLine />
-            <Box px={"139px"}>
+            <Box px={{ xl: "129px", lg: "100px", base: "19px", md: "19px" }}>
                 <HeroContainer baseWhite={baseWhite} primaryColorLight={primaryColorLight} />
             </Box>
-            <Box px="79px" >
+            <Box px={{base: "40px", xl: "79px"}} >
                 <WhatWeOffer />
                 <WhatHappens />
             </Box>
-            <Box px={"80px"}>
-                <SponsorParent />
-            </Box>
-            <Box>
-                <IsComingContainer />
-            </Box>
-            <Box>
-                <JoinCommunity />
-            </Box>
-            <Box>
-                <BottomRegister />
-            </Box>
-            <Box px={"114px"}>
-                <Attendees />
-            </Box>
+            <SponsorParent />
+            <IsComingContainer />
+            <JoinCommunity />
+            <BottomRegister />
+            <Attendees />
             <FAQs />
-            <FooterContainer primaryColorLight={primaryColorLight} />
+            <FooterContainer getLinkStyle={getLinkStyle} primaryColorLight={primaryColorLight} />
         </Box>
     );
 };

@@ -1,17 +1,18 @@
 import { Box, Heading, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Flex, useBreakpointValue, Text } from "@chakra-ui/react";
+import HeadingCustom from "./HeadingCustom";
 
 const FAQs = () => {
   const isDesktop = useBreakpointValue({ base: false, md: true });
 
   return (
-    <Box mb={"149px"} mx={"80px"}>
-      <Heading mb={"78px"} fontSize={"45"} fontWeight={"bold"} textAlign="left">FAQs</Heading>
-      <Flex mx={"94px"} flexDir={isDesktop ? "row" : "column"} gap={8}>
+    <Box mb={{base: "50px", xl: "149px"}} mx={{base: "40px", xl: "80px"}}>
+      <HeadingCustom mb={{xl: "78px"}} font={"45px"} content={"FAQs"} hAlign="left" />
+      <Flex mx={{base: "0px", xl: "94px"}} flexDir={isDesktop ? "row" : "column"} >
         <Box flex="1">
           <Accordion allowMultiple>
             <AccordionItem>
               <AccordionButton>
-                <Text fontSize="24px" fontWeight={"bold"} color={"#340066"} flex="1" textAlign="left">
+                <Text fontSize={{base: "20px", xl: "24px"}} fontWeight={"bold"} color={"#340066"} flex="1" textAlign="left">
                   Lorem ipsum dolor sit amet, consectetur adi elit.
                 </Text>
                 <AccordionIcon />
@@ -22,7 +23,7 @@ const FAQs = () => {
             </AccordionItem>
             <AccordionItem>
               <AccordionButton>
-                <Text fontSize="24px" fontWeight={"bold"} color={"#340066"} flex="1" textAlign="left">
+                <Text fontSize={{base: "20px", xl: "24px"}} fontWeight={"bold"} color={"#340066"} flex="1" textAlign="left">
                   Lorem ipsum dolor sit amet, consectetur adi elit.
                 </Text>
                 <AccordionIcon />
@@ -33,7 +34,7 @@ const FAQs = () => {
             </AccordionItem>
             <AccordionItem>
               <AccordionButton>
-                <Text fontSize="24px" fontWeight={"bold"} color={"#340066"} flex="1" textAlign="left">
+                <Text fontSize={{base: "20px", xl: "24px"}} fontWeight={"bold"} color={"#340066"} flex="1" textAlign="left">
                   Lorem ipsum dolor sit amet, consectetur adi elit.
                 </Text>
                 <AccordionIcon />
@@ -48,7 +49,7 @@ const FAQs = () => {
           <Accordion allowMultiple>
             <AccordionItem>
               <AccordionButton>
-                <Text fontSize="24px" fontWeight={"bold"} color={"#340066"} flex="1" textAlign="left">
+                <Text fontSize={{base: "20px", xl: "24px"}} fontWeight={"bold"} color={"#340066"} flex="1" textAlign="left">
                   Lorem ipsum dolor sit amet, consectetur adi elit.
                 </Text>
                 <AccordionIcon />
@@ -59,7 +60,7 @@ const FAQs = () => {
             </AccordionItem>
             <AccordionItem>
               <AccordionButton>
-                <Text fontSize="24px" fontWeight={"bold"} color={"#340066"} flex="1" textAlign="left">
+                <Text fontSize={{base: "20px", xl: "24px"}} fontWeight={"bold"} color={"#340066"} flex="1" textAlign="left">
                   Lorem ipsum dolor sit amet, consectetur adi elit.
                 </Text>
                 <AccordionIcon />
@@ -70,7 +71,7 @@ const FAQs = () => {
             </AccordionItem>
             <AccordionItem>
               <AccordionButton>
-                <Text fontSize="24px" fontWeight={"bold"} color={"#340066"} flex="1" textAlign="left">
+                <Text fontSize={{base: "20px", xl: "24px"}} fontWeight={"bold"} color={"#340066"} flex="1" textAlign="left">
                   Lorem ipsum dolor sit amet, consectetur adi elit.
                 </Text>
                 <AccordionIcon />

@@ -7,10 +7,15 @@ import "./index.css"
 function App() {
   const lightPurple = "#9524FF"
   const baseWhite = "#FDF7FF"
+  const getLinkStyle = (isActive) => ({
+    color: isActive ? lightPurple : 'black',
+    textDecoration: 'none',
+    fontWeight: 'medium'
+  });
   return (
     <Box fontFamily={"Montserrat, poppins"}>
-      <NavBar primaryColorLight={lightPurple} />
-      <HomePage baseWhite={baseWhite} primaryColorLight={lightPurple} />
+      <NavBar getLinkStyle={getLinkStyle} primaryColorLight={lightPurple} />
+      <HomePage getLinkStyle={getLinkStyle} baseWhite={baseWhite} primaryColorLight={lightPurple} />
     </Box>
   );
 }
