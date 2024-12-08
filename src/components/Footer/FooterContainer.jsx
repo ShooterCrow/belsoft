@@ -2,11 +2,11 @@ import { Box } from "@chakra-ui/react"
 import FooterCTA from "./FooterCTA"
 import Footer from "./Footer"
 
-const FooterContainer = () => {
+const FooterContainer = ({primaryColorLight}) => {
   return (
     <Box>
         <FooterCTA />
-        <Footer />
+        <Footer primaryColorLight={primaryColorLight} />
     </Box>
   )
 }

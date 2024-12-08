@@ -10,17 +10,18 @@ import JoinCommunity from './JoinCommunity/JoinCommunity';
 import BottomRegister from './BottomRegister/BottomRegister';
 import Attendees from './Attendees/Attendees';
 import FAQs from './FAQs';
+import FooterContainer from './Footer/FooterContainer';
 // import { Calendar as CalendarIcon, LocationOn as LocationIcon } from 'lucide-react';
 
 const HomePage = ({ primaryColorLight, baseWhite }) => {
     return (
-        <Box pb={-8990} pt={"272px"}>
+        <Box pt={"272px"}>
             <BackgroundLine />
             <Box px={"139px"}>
                 <HeroContainer baseWhite={baseWhite} primaryColorLight={primaryColorLight} />
             </Box>
             <Box px="79px" >
-                <WhatWeOffer/>
+                <WhatWeOffer />
                 <WhatHappens />
             </Box>
             <Box px={"80px"}>
@@ -38,9 +39,8 @@ const HomePage = ({ primaryColorLight, baseWhite }) => {
             <Box px={"114px"}>
                 <Attendees />
             </Box>
-            <Box>
-                <FAQs />
-            </Box>
+            <FAQs />
+            <FooterContainer primaryColorLight={primaryColorLight} />
         </Box>
     );
 };

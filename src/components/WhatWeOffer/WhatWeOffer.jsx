@@ -33,11 +33,11 @@ const WhatWeOffer = () => {
         ))
       }
       <Box
-        pos="absolute"
+        position="absolute"
         left={0}
         right={0}
         width="100%"
-        height="100%"
+        height="auto"
         mt={"630px"}
         pointerEvents="none"
         zIndex="-1"
