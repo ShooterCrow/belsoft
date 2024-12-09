@@ -26,7 +26,7 @@ const SponsorRightItem = () => {
 
             {/* Form Starts Here */}
             <form onSubmit={formik.handleSubmit} style={{ width: "100%" }}>
-                <VStack spacing={{xl: "29px"}} alignItems="flex-start">
+                <VStack spacing={{md: "10px", xl: "29px"}} alignItems="flex-start">
                     <Flex direction={{base: "column", md: "column", lg: "row"}} gap={{xl: "29px"}} w={"100%"}>
                         <FormControl>
                             <FormLabel fontSize={{base: "14px", xl: "18px"}} fontWeight={"semibold"} htmlFor="name">Name</FormLabel>
