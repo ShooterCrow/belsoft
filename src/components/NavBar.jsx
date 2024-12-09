@@ -31,7 +31,7 @@ const NavBar = ({ getLinkStyle, primaryColorLight }) => {
                     <DrawerContent bg={"white"}>
                         <DrawerCloseButton />
                         <DrawerHeader borderBottomWidth="1px">
-                            Navigation Menu
+                            Founders Foundation
                         </DrawerHeader>
 
                         <DrawerBody>
