@@ -19,7 +19,7 @@ const NavBar = ({ getLinkStyle, primaryColorLight }) => {
                     top="0"
                     right="4"
                     zIndex="9" >
-                    <GiHamburgerMenu size="2em" />
+                    <GiHamburgerMenu color='black' size="2em" />
                 </Button>
                 <Drawer
                     isOpen={isOpen}
