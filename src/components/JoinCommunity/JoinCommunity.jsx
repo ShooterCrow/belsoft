@@ -1,6 +1,6 @@
 import { Flex, Text, Box, Image, Link } from "@chakra-ui/react"
 import { Link as RouterLink } from "react-router-dom"
-import RoundImageContainer from "./roundImageContainer"
+import RoundImageContainer from "./roundImageContainer.jsx"
 import LinkButton from "../LinkButton"
 import HeadingCustom from "../HeadingCustom"
 
